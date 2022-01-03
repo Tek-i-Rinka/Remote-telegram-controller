@@ -3,16 +3,16 @@ from telebot import types
 import os
 import pyautogui as pg
 
-token = "5038153352:AAEFXN0gkE3PlhDbDQB354dola6-z7HBC4o"
+token = "ENTER YOUR TOKEN HERE"
 
-bot=telebot.TeleBot(token)
+bot=telebot.TeleBot(token) # creating bot
 
+# creating markup for buttons
 playText = 'Play/Pause \u25b6\ufe0f'
 blockText = 'Block Computer \ud83d\udd12'
 volumeUpText = 'Up \ud83d\udd0a'
 volumeDownText = 'Down \ud83d\udd09'
 volumeNoneText = 'Mute \ud83d\udd07'
-
 markup = types.ReplyKeyboardMarkup(row_width=1)
 play = types.KeyboardButton(playText)
 block = types.KeyboardButton(blockText)
@@ -23,7 +23,7 @@ markup.row(play)
 markup.row(block)
 markup.row(volumeDown, volumeUp, volumeMute)
 
-
+# main function to control computer
 def echo_messages(messages):
     for message in messages:
         chatId = message.chat.id
