@@ -59,6 +59,3 @@ def echo_messages(messages):
 
 bot.set_update_listener(echo_messages)
 bot.polling(none_stop=True)
-
-# while True: # Don't let the main Thread end.
-#     pass
