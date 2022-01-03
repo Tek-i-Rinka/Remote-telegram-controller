@@ -57,6 +57,7 @@ def echo_messages(messages):
                 else:
                     bot.send_message(chatId, "\u2754", reply_markup=markup)
     except:
+        print("error")
         return
 
 
