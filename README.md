@@ -1,5 +1,5 @@
 # Remote-telegram-controller
-It is telegram bot that can control your computer remotely
+It is telegram bot that can control your computer remotely (only for Windows)
 
 To use this script you should create your bot with help from BotFather, copy yours token and paste it to "token" variable in my script
 
