@@ -13,15 +13,18 @@ blockText = 'Block Computer \ud83d\udd12'
 volumeUpText = 'Up \ud83d\udd0a'
 volumeDownText = 'Down \ud83d\udd09'
 volumeNoneText = 'Mute \ud83d\udd07'
+
 markup = types.ReplyKeyboardMarkup(row_width=1)
+
 play = types.KeyboardButton(playText)
-block = types.KeyboardButton(blockText)
 volumeUp = types.KeyboardButton(volumeUpText)
 volumeDown = types.KeyboardButton(volumeDownText)
 volumeMute = types.KeyboardButton(volumeNoneText)
+block = types.KeyboardButton(blockText)
+
 markup.row(play)
-markup.row(block)
 markup.row(volumeDown, volumeUp, volumeMute)
+markup.row(block)
 
 # main function to control computer
 def echo_messages(messages):
@@ -32,10 +35,6 @@ def echo_messages(messages):
                 text = message.text
                 if text == playText:
                     pg.press("playpause")
-                    bot.send_message(chatId, "\u2705")
-                    bot.send_message(chatId, "\u2754", reply_markup=markup)
-                elif text.split(" ")[0] == "Block":
-                    os.system("rundll32.exe user32.dll,LockWorkStation")
                     bot.send_message(chatId, "\u2705")
                     bot.send_message(chatId, "\u2754", reply_markup=markup)
                 elif text.split(" ")[0] == "Block":
@@ -59,7 +58,6 @@ def echo_messages(messages):
     except:
         print("error")
         return
-
 
 bot.set_update_listener(echo_messages)
 bot.polling(none_stop=True)
