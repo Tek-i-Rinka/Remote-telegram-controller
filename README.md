@@ -1,10 +1,8 @@
 # Remote-telegram-controller
 This is a telegram bot that can control your computer remotely ***(only for Windows)***
 
-
-***Опиши здесь где нужно взять token.***
-
-To use this script you should create your bot with help from BotFather, copy your token and paste it into "token" variable in my script.
+To use this script you should create your bot with help from BotFather, copy your token and paste it into "token" variable in my script. 
+(How do I get my token? https://www.siteguarding.com/en/how-to-get-telegram-bot-api-token)
 
 Then start app.py by running the following command:
     `py app.py`
